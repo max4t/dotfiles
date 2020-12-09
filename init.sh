@@ -22,7 +22,7 @@ if [ -d "dotfiles" ]; then
     exit 1
 fi
 
-git clone git@github.com:max4t/dotfiles.git
+git clone https://github.com/max4t/dotfiles.git
 cd dotfiles
 
 ./install.sh
