@@ -14,3 +14,13 @@ else
     echo "Only MacOS is supported" >&2
     exit 1
 fi
+
+if [ -d "dotfiles" ]; then
+    echo "'dotfiles' already exists. Remove it or run 'install.sh'" >&2
+    exit 1
+fi
+
+git clone git@github.com:max4t/dotfiles.git
+cd dotfiles
+
+./install.sh
