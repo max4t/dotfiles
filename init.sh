@@ -1,7 +1,7 @@
 #!/bin/sh
 
 xcode_cli_installed() {
-    xcode-select -p 2> /dev/null
+    xcode-select -p 2>&1 > /dev/null
     if [ "$(echo $?)" -ne "0" ]; then
         echo "Run 'xcode-select --install'" >&2
         exit 1
