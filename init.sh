@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 xcode_cli_installed() {
     xcode-select -p 2>&1 > /dev/null
     if [ "$(echo $?)" -ne "0" ]; then
